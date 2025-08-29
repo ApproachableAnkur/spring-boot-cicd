@@ -30,7 +30,7 @@ spec:
   selector:
     app: spring-boot-k8s
   ports:
-    - protocol: "TCP"
+    - name: http
       port: 6060 # The port that the service is running on in the cluster
       targetPort: 9090 # The port exposed by the service
-  type: NodePort # type of the service.
+  type: LoadBalancer # type of the service.
